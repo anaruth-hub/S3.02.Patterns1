@@ -107,3 +107,67 @@ Develop a report generation system that:
 ### Clone the repository
 ```bash
 git clone https://github.com/anaruth-hub/S3.02.Patterns1.git
+
+📸 Demo
+
+Console output examples:
+
+Singleton
+mkdir folder
+cd folder
+undo -> cd folder removed
+
+Abstract Factory
+Address: Carrer Major 34, 08001 Barcelona | Phone: +34 123456789
+Address: 154 5th Avenue, New York, NY 10001 | Phone: +1 987654321
+
+Strategy
+JSON:
+{"title":"Weekly Report","date":"2026-02-18","lines":["Line A","Line B"]}
+
+HTML:
+<html><body>...</body></html>
+
+🧩 Diagrams & Technical Decisions
+Architectural Decisions
+
+Singleton
+
+Ensures one global shared state.
+
+Prevents multiple command histories.
+
+Encapsulation enforced through private constructor.
+
+Abstract Factory
+
+Reduces coupling between client and concrete implementations.
+
+Supports Open/Closed Principle.
+
+Enables scalable country-based formatting system.
+
+Strategy
+
+Replaces conditional logic (if/switch) with composition.
+
+Allows runtime behavior change.
+
+Promotes extensibility and maintainability.
+
+SOLID Principles Applied
+
+S – Single Responsibility
+Each class has one clear responsibility.
+
+O – Open/Closed
+New strategies or factories can be added without modifying existing code.
+
+L – Liskov Substitution
+All implementations respect their abstract contracts.
+
+I – Interface Segregation
+Small, focused interfaces (ReportStrategy, Address, Phone).
+
+D – Dependency Inversion
+High-level modules depend on abstractions, not concrete implementations.
